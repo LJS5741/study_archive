@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 위치속성 : 요소를 상대적으로 또는 절대적으로 배치 */
+    /* static : 기본값, 문서의 흐름대로 배치 */
+    /* relative : 자신의 원래 위치를 기준으로 이동 */
+    /* absolute : 가장 가까운 위치 지정 부모 요소를 기준으로 절대 위치 */
+    /* fixed : 뷰포트(브라우저 화면)를 기준으로 고정(스크롤시 고정) */
+    /* sticky : 스크롤되면 특저 위치에 고정(스크롤이 없는 경오는 일반 흐름) */
+    .container {
+      width: 500px;
+      height: 4000px;
+      background-color: aqua;
+      position: relative;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+    .red-box {
+      background-color: red;
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      z-index: 10;
+    }
+    .red-box:hover {
+      z-index: 1;
+    }
+    .green-box {
+      background-color: green;
+      position: relative;
+      top: 50px;
+      left: 50px;
+    }
+    .green-box:hover {
+      z-index: 1;
+    }
+    .blue-box {
+      background-color: blue;
+      position: sticky;
+      top: 50px;
+      left: 300px;
+    }
+    .blue-box:hover {
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 적용 우선 순위 : !important -> 인라인 -> 아이디 -> 클래스 -> 태그 -> 전체 -> 상속 */
+    /* 상속 : 부모 요소에 적용된 스타일을 자식 요소가 물려 받는 것 */
+    .parent {
+      font-size: 1vw;
+    }
+    .child {
+      font-size: 2vw;
+    }
+    .child-to-child { 
+      font-size: 3vw;
+    }
+    /* 색상 표기법 : 색상 키워드 사용, rgb 색상 표기, HEX 표기법 */
+    /* 색상 키워드 : red, yellow, green */
+    /* rgb 색상 포기 : rgb(255, 0, 0) */
+    /* HEX 표기법 : #ff0000 -> #f00 */
+    h1 {
+      color: rgb(255, 0, 0);
+    }
+    h2 {
+      color: rgb(255,0, 0, 0.1);
+    }
+    h3 {
+      color: #0000ff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>오늘의 날씨</h1>
+    <p>오늘은 날씨가 흐립니다.</p>
+    <div class="parent">
+      <p>부모의 폰트 크기 입니다.</p>
+      <div class="child">
+        <p>자식의 폰트 크기 입니다.</p>
+        <div class="child-to-child">
+          <p>자식의 자식 폰트 크기 입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>RGB로 색상을 지정 합니다.</h1>
+  <h2>RGB로 색상과 투명도를 지정 합니다.</h2>
+  <h3>HEX 값으로 색상을 지정 합니다.</h3>
+</body>
+</html>

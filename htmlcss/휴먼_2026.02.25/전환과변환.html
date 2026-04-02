@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 전환 : 요소의 속성이 변경될 때 중간 과정을 부드럽게 보여주는 효과 */
+    /* 변환 : 요소의 모양(회전, 아동 크기, 기울기 등)을 변형시키는 효과*/
+    .container {
+      padding: 500px;
+      padding: 10px;
+      color: white;
+      border: 1px solid black;
+    }
+    .bar {
+      width: 100px;
+      height: 30px;
+      background-color: orangered;
+      transition-property: width;
+      transition-duration: 1s;
+      margin-bottom: 10px;
+      box-shadow: 1px 1px 5px darkblue;
+    }
+    .container:hover .bar {
+      width: 300px;
+    }
+    .bar:nth-child(1) {
+      /* linear : 처음 속도와 마지막 속도가 일정 */
+      transition-timing-function: linear;
+    }
+    .bar:nth-child(2) {
+      /* 처음에는 속도가 점점 빨라지다가 중간부터 느려짐 */
+      transition-timing-function: ease;
+    }
+    .bar:nth-child(3) {
+      /* 처음에는 속도가 느리지만 완료될 때까지 점점 빨라짐 */
+      transition-timing-function: ease-in;
+    }
+    .bar:nth-child(4) {
+      /* 처음에는 속도가 빠르지만 완료될 떄까지 점점 느려짐 */
+      transition-timing-function: ease-out;
+    }
+    .bar:nth-child(5) {
+      /* 처음에는 속도가 느리지만 점점 빨라지다가 다시 점점 느려짐 */
+      transition-timing-function: ease-in-out;
+    }
+    .bar:nth-child(6) {
+      transition-timing-function: cubic-bezier(0.85, 0.06, 0.36, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bar">linear</div>
+    <div class="bar">ease</div>
+    <div class="bar">ease-in</div>
+    <div class="bar">ease-out</div>
+    <div class="bar">ease-in-out</div>
+    <div class="bar">커스텀</div>
+  </div>
+</body>
+</html>

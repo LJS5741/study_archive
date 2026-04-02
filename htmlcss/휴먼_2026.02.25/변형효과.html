@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 변형(transform) 요소를 회전, 이동, 크기, 기울기 */
+    div {
+      width: 100px;
+      height: 100px;
+      margin-left: 200px;
+      margin-top: 200px;
+      background-color: red;
+      transition: 1s all;
+    }
+    div:hover {
+      /* transform: translate(100px, 200px); X축, Y축 이동 */
+      /* transform: scale(2,2); 크기 */
+      /* transform: skewX(30deg); 기울기 */
+      transform: rotate(30deg);
+      transform-origin: top left;
+    }
+    
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

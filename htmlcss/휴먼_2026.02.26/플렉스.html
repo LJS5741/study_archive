@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Flex : 유연하게 요소들을 배치하고 정렬 */
+    /* 1차원 배치(가로, 세로) */
+    /* 컨테이너 : 아이템 담을 상자 */
+    /* 아이템 : 컨테이너의 직계 자식 요소, 또 다른 컨테이너가 될 수 있음 */
+    /* 주축 : 아이템 배치되는 기본 방향 (왼쪽 -> 오른쪽) */
+    /* 교차축 : 주축이 수평이면 교차축은 수직 방향 */
+    .flex-container {
+      width: 480px;
+      height: 200px;
+      background-color: aqua;
+      border: 1px solid black;
+      display: flex;   /* 기본 값이 수평 정렬 */
+      /* nowrap 한줄에 아이템 배치, 공간이 부족하면 찌그러짐 (기본 옵션임) */
+      /* wrap 공간이 부족하면 아이템이 여러 줄로 자동 줄바꿈이 일어남 */
+      /* wrap-reverse 줄바꿈을 하되, 아래에서 위 방향으로 진행 */
+      flex-wrap: wrap;
+      flex-direction: row;   /* 아이템 배치 방향, 기본은 row(행) */
+      /* 주축 정렬 : flex-start, flex-end, center, space-between, space-around, space-evenly */
+      justify-content: flex-start;
+      align-items: center; /* atretch가 기본 옵션 */
+      padding: 2px;
+      gap: 2px;   /* gap은 부모한테 주는것*/
+      
+    }
+    .flex-item1 {
+      /* flex-grow : 1, flex-shrink : 1, flex-basis : 0 */
+      flex: 1;    /* 보통 남는 여백을 채울 때 많이 씀 */
+      height: 50px;
+      border: 1px solid darkblue;
+      color: white;
+      background-color: orange;
+    }
+    .flex-item2 {
+      flex-grow: 2;
+      background-color: orangered;
+      height: 50px;
+      border: 1px solid darkblue;
+      color: white;
+    }
+    .flex-item3 {
+      flex-grow: 3;
+      background-color: red;
+      height: 50px;
+      border: 1px solid darkblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item1">item1</div>
+    <div class="flex-item2">item2</div>
+    <div class="flex-item3">item3</div>
+  </div>
+</body>
+</html>

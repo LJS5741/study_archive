@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Malgun Gothic', sans-serif;
+    }
+    body {
+      background-color: #eee;
+      padding-top: 70px; /* 상단바 영역 만큼 띄움 */
+      position: relative;
+      width: 1024px;
+    }
+    /* 페이지 로드 시 위에서 내려오는 애니메이션 */
+    @keyframes slideDown {
+      from { 
+        transform: translateY(-100%);
+        opacity: 0; /* 완전 투명 */
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1; /* 불투명 이미지 */
+      }
+    }
+    .navbar {
+      position: fixed; /* 화면 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: navy;
+      display: flex;  /* 기본적으로 수평 배치 */
+      align-items: center;  /* 교차축을 센터로 정렬 */
+      justify-content: space-between;  /* 일정한 간격으로 배치 */
+      padding: 0 40px;
+      /* 애니메이션 적용 */
+      animation-name: slideDown;
+      animation-duration: 1s;
+    }
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      padding: 8px 16px;
+      transition: 0.5s all;
+    }
+    .nav-links a:hover {
+      color: white;
+      font-weight: bold;
+      transform: translateY(-2px);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .nav-links li {
+      animation-name: fadeIn;
+      animation-duration: 0.4s;
+    }
+    .nav-links li:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    .nav-links li:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .nav-links li:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+    .nav-links li:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+      
+    
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+      <span class="logo">LOGO</span>
+      <ul class="nav-links">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">포트폴리오</a></li>
+        <li><a href="#">문의</a></li>
+      </ul>
+    </nav>
+</body>
+</html>

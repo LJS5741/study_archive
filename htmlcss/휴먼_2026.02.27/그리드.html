@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 그리드 레이아웃 : 2차원 격자 형태로 자유자재로 배치 가능 */
+    .grid-container {
+      display: grid;
+      width: 500px;
+      height: 300px;
+      background-color: greenyellow;
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-rows: 100px 100px;
+    }
+    .item {
+      color: white;
+      background-color: orange;
+      display: flex;
+     justify-content: center;
+     align-items: center;    }
+      
+    .item:nth-child(2n) {
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">박스 1</div>
+    <div class="item">박스 2</div>
+    <div class="item">박스 3</div>
+    <div class="item">박스 4</div>
+    <div class="item">박스 5</div>
+  </div>
+  
+</body>
+</html>

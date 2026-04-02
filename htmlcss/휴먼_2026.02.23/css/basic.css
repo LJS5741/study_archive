@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  padding:0;
+}
+
+h1 {
+      background-color: #222;
+      color: white;
+    }
+    p {
+      background-color: aqua;
+      font-style: italic;
+      color: royalblue;
+      text-align: center;
+    }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 박스모델 : 각각의 요소가 화면에 영역을 차지하는 형태 */
+    /* content : 요소의 내용 */
+    /* padding : 요소의 내부 여백, border 기준 */
+    /* border : 요소의 테두리 경계션 */
+    /* margin : 요소의 외부 여백 */
+    p {
+      margin: 10px 20px 5px;
+      padding: 10px;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      background-color: aqua;
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: 2px 2px 5px blue;
+      display: inline-block;
+      /* display: flex;
+         align-items: center;
+         justify-content: center; 도 가능(이게 편함) */
+ }
+ .container {
+  display: flex;
+  width: 768px;
+  margin: auto;
+  background-color: orange;
+ }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <p>BOX1</p>
+  <p>BOX2</p>
+  <p>BOX3</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 선택자는 스타일을 적용할 HTML 요소를 지정하는 영역 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 전체 선택자 : 모든 HTML 요소에 스타일 적용 */
+    * {
+      color: red;
+    }
+    /*  태그 선택자 : 특정 태그 이름을 기준으로 스타일 적용 */
+    div{
+      background-color: royalblue;
+    }
+    h3{
+      color: black;
+    }
+    /* 클래스 선택자 : 특정 그룹의 요소에 스타일 적용 */
+    /* .선택자이름 */
+    /* class 키워드로 접근 */
+    .movie1 {
+      background-color: orange;
+    }
+    .movie2 {
+      background-color: orangered;
+    }
+    .movie3 {
+      background-color: green;
+      h3 {color: yellow;}
+    }
+    /* 아이디 선택자 : 특정 하나의 요소에만 적용 */
+    /* 문서 전체에서 유일해야 함 */
+    #container {
+      width: 500px;
+      margin: auto;
+    }
+    
+    /* 자식 선택자 : 부모 요소의 하위에 있는 자식 요소에 스타일 적용 */
+    /* 2개 이상의 선택자가 사용되며, 선택자와 선택자는 '>' 기호로 구분 */
+    .movie1 > p {
+      font-style: italic;
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+  <h1>영화 소개 페이지</h1>
+    <div class="movie1">
+      <h3>왕과 사는 남자</h3>
+      <p>단종 이야기</p>
+      <p>현재 인기 순위 1위</p>
+    </div>
+    <div class="movie2">
+      <h3>넘버원</h3>
+      <p>최우식 주연 영화</p>
+      <p>현재 인기 순위 3위</p>
+    </div>
+    <div class="movie3">
+      <h3>만약에 우리</h3>
+      <p>로맨스 영화</p>
+    </div>
+    <p>영화 소개 페이지 끝</p>
+  </div>
+
+  
+</body>
+</html>

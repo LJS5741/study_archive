@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(90deg, #2c2f5c, #1e213f);
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  letter-spacing: .03em;
+  color: white;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.container aside {
+  width: 200px;
+  background-color: #3437cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.container main {
+  flex: 1;
+  background: #cf3c2c;
+  color: white;
+  text-align: center;
+  padding: 32px;
+}
+
+.cards {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card:nth-child(2n) {
+  background: #888;
+  color: white;
+}
+
+.card:nth-child(2n-1) {
+  background: goldenrod;
+}
+
+footer {
+  position: relative;
+  background: #2c2f5c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: black;
+}
+  </style>
+</head>
+<header>
+  <h1>HEADER — gradient background</h1>
+</header>
+
+<div class="container">
+  <aside>
+    <h3>ASIDE</h3>
+    <p>sidebar</p>
+    <p>width: 200px</p>
+  </aside>
+
+  <main>
+    <h3>MAIN CONTENT</h3>
+    <p>padding: 32px</p>
+    <p>box-sizing: border-box</p>
+  </main>
+</div>
+<div class="cards">
+  <div class="card">CARD (even)</div>
+  <div class="card">CARD (odd)</div>
+</div>
+
+<footer>
+  FOOTER — dark background
+</footer>
+</html>

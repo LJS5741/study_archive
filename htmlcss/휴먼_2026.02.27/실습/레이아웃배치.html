@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    .layout {
+      display: grid;
+      width: 100%;
+      color: white;
+      padding: 10px;
+      gap: 4px;
+      grid-template-columns: repeat(5,1fr);
+      grid-template-rows: repeat(5,100px);
+      grid-row: 100;
+      grid-template-areas: 
+        "로고 타이틀 타이틀 타이틀 햄버거메뉴"
+        "섹션1 섹션1 컨텐츠 컨텐츠 컨텐츠"
+        "섹션2 섹션2 컨텐츠 컨텐츠 컨텐츠"
+        "섹션3 섹션3 컨텐츠 컨텐츠 컨텐츠"
+        "약관 회사 회사 회사 기타"
+      ;
+    }
+      #로고 {
+        grid-area: 로고;
+        background-color: yellow;
+      }
+      #타이틀 {
+        grid-area: 타이틀;
+        background-color: orangered;
+      }
+      #메뉴 {
+        grid-area: 햄버거메뉴;
+        background-color: yellow;
+      }
+      #섹션1 {
+        grid-area: 섹션1;
+        background-color: blue;
+      }
+      #섹션2{
+        grid-area: 섹션2;
+        background-color: skyblue;
+      }
+      #섹션3 {
+        grid-area: 섹션3;
+        background-color: lightblue;
+      }
+      #컨텐츠 {
+        grid-area: 컨텐츠;
+        background-color: lightgreen;
+      }
+      #약관 {
+        grid-area: 약관;
+        background-color: gray;
+      }
+      #회사 {
+        grid-area: 회사;
+        background-color: black;
+      }
+      #기타 {
+        grid-area: 기타;
+        background-color: gray;
+      }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <p id="로고" class="item">로고</p>
+    <p id="타이틀" class="item">타이틀을 넣어 주세요</p>
+    <p id="메뉴" class="item">햄버거메뉴</p>
+    <p id="섹션1" class="item">섹션1</p>
+    <p id="섹션2" class="item">섹션2</p>
+    <p id="섹션3" class="item">섹션3</p>
+    <p id="컨텐츠" class="item">컨텐츠 영역</p>
+    <p id="약관" class="item">약관및 정책</p>
+    <p id="회사" class="item">회사 정보</p>
+    <p id="기타" class="item">기타</p>
+  </div>
+</body>
+</html>

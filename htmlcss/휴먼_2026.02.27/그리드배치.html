@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    .grid-container {
+      display: grid;
+      width: 700px;
+      gap: 10px;
+      margin: 10px;
+      grid-template-columns: repeat(3, 1fr);  /* column을 3개 넣고 크기는 1fr이다 */
+      grid-template-rows: repeat(3, 100px);   /* column을 3개 넣고 높이는 100px이다 */
+      grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "footer footer footer"
+      ;
+      #header {
+        grid-area: header;
+        background-color: orangered;
+      }
+      #sidebar {
+        grid-area: sidebar;
+        background-color: aqua;
+      }
+      #content {
+        grid-area: content;
+        background-color: orange;
+      }
+      #footer {
+        grid-area: footer;
+        background-color: violet;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <p id="header" class="item">header</p>
+    <p id="sidebar" class="item">sidebar</p>
+    <p id="content" class="item">content</p>
+    <p id="footer" class="item">footer</p>
+  </div>  
+</body>
+</html>

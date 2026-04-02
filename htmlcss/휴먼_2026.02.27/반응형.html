@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 반응형웹 : 플렉스, 그리드, 미디어쿼리를 이용해 화면의 크기가 변할때 대응하는 방법 */
+    /* 미디어쿼리 : 뷰포트의 크기, 장치 종류 등의 정보를 기반으로 CSS 스타일으로 동적으로 변경 */
+    body {
+      background: url(./images/bg0.jpg);
+    }
+    @media screen and (max-width: 1024px) {
+      body {
+        background: url(./images/bg1.jpg);
+        background-size: cover;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          background: url(./images/./bg2.jpg);
+          background-size: cover;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  /* 배경 속성 : 웹 요소의 배경을 설정하는 방법 */
+  body{
+    height: 1000px;
+  }
+  div {
+    width: 320px;
+    height: 240px;
+    background-image: url("./images/coffee.jpg");     /* 이미지 삽입 */
+    background-repeat: no-repeat;
+    background-color: aqua;
+    border: 1px solid black;
+    /* background-size: cover;     비율 유지, 비율에 맞게끔 채워넣음(짧은 쪽 기준으로 긴 쪽의 이미지를 날려버림)
+       background-size: container; 비율 유지, 비율이 맞지 않으면 여백을 남김 */    
+    background-position: center;
+  }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

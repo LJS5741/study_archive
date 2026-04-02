@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .title {
+      color: white;
+      font-weight: bold;
+      background-color: black;
+      padding: 1px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    h4 {
+      padding-left: 20px;
+    }
+    .layout {
+      display: flex;
+    }
+    .main {
+      margin-top: 80px;     
+      margin-left: 250px;
+      flex: 1;
+    }
+    .inven {
+      position: sticky;
+      background-color: #ececec;
+      border-radius: 10px;
+      width: 150px;
+      height: 230px;
+      top: 100px;
+      left: 210px;
+      padding: 15px;
+    }
+    h5 {
+      margin: 0;
+      font-size: 18px;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      list-style: none;
+      font-size: 15px;
+    }
+    .box {
+      border: 1px solid lightgray;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .sub {
+      border-bottom: 2px solid red;
+      padding-bottom: 8px
+    }
+  </style>
+</head>
+<div>
+  <div class="title">
+    <h4>CSS Position 학습 페이지</h4>
+  </div>
+
+  <div class="layout">
+    <div class="inven">
+      <h5>목차</h5>
+      <ul>
+        <li>01. static</li>
+        <li>02. relative</li>
+        <li>03. absolute</li>
+        <li>04. fixed</li>
+        <li>05. sticky</li>
+        <li>06. z-index</li>
+      </ul>
+    </div>
+    
+    <div class="main">
+      <div class="box">
+        <h3 class="sub">01. static</h3>
+        <p class="explain">
+          기본값입니다. 문서의 일반 흐름에 따라 위에서 아래로 배치됩니다. top, left 등의 위치속성이 적용되지 않습니다.
+        </p>
+      </div>
+        <div class="box">
+        <h3 class="sub">02. relative</h3>
+        <p class="explain">
+          자신의 원래 위치를 기준으로 이동합니다. 이동해도 원래 자리는 그대로 유지됩니다. 자식 요소에 absolute를 적용할 때 기준 부모로 주로 사용합니다.
+        </p>
+      </div>
+      <div class="box">
+        <h3 class="sub">03. absolute</h3>
+        <p class="explain">
+          position이 static이 아닌 가장 가까운 부모 요소를 기준으로 위치를 잡습니다. 문서 흐름에서 빠져나옵니다. 부모에 relative가 없으면 html 전체 기준으로 위치가 잡힙니다.
+        </p>
+      </div>
+      <div class="box">
+        <h3 class="sub">04. fixed</h3>
+        <p class="explain">
+          뷰포트(브라우저 화면)를 기준으로 고정됩니다. 이 페이지 상단의 네비게이션 바가 fixed입니다. 스크롤을 내려도 항상 같은 위치에 고정되어 있습니다.
+        </p>
+      </div>
+      <div class="box">
+        <h3 class="sub">05. sticky</h3>
+        <p class="explain">
+          평소에는 일반 흐름을 따르다가, 스크롤이 지정한 위치에 도달하면 그 자리에 고정됩니다. 왼쪽 목차가 sticky입니다. 스크롤을 내리면서 확인해 보세요!
+        </p>
+      </div>
+      <div class="box">
+        <h3 class="sub">06. z-index</h3>
+        <p class="explain">
+          요소들이 겹칠 때 어떤 요소가 앞에 올지를 결정합니다. 값이 클수록 앞에 표시됩니다. position이 static이 아닌 요소에만 적용됩니다.
+        </p>
+      </div>
+  </div>
+</body>
+</html>
