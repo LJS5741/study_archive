@@ -1,0 +1,44 @@
+<!-- 이벤트 : 웹 브라우저와 사용자 사이에 상호작용이 발생하는 특정 시점을 의미
+- 웹브라우저에서 동작 하는 프로그램은 기본적으로 이벤트 주도형 프로그램
+- 이벤트 주도형 프로그램이란? 이벤트가 발생하면 미리 등록해둔 작업을 수행하는 프로그램을 말함 -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 인라인 방식으로 이벤트 등록 하기 -->
+  <button onclick="clickEvent()">클릭</button>
+  <input type="text" id="input_box" onfocus="focusEvent()" onblur="blurEvent()" />
+
+  <!-- 이벤트 등록 메서드로 이벤트 등록하기 -->
+  <button class="btn">클릭</button>
+
+  <script>
+    function clickEvent() {
+      alert("버튼이 눌러 졌습니다.");
+    }
+
+    function focusEvent() {
+      const inputBox = document.querySelector("#input_box");
+      inputBox.style.background = "orange";
+    }
+
+    function blurEvent() {
+      const inputBox = document.querySelector("#input_box");
+      inputBox.style.background = "green";
+    }
+
+    const btnEl = document.querySelector(".btn");
+    btnEl.addEventListener("click", () => {
+      alert("이벤트 등록 방식으로 이벤트 호출");
+    });
+  </script>
+</body>
+
+</html>
