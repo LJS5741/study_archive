@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: lightgray;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 10px;
+    }
+
+    .img {
+      width: 100px;
+    }
+
+
+    .inputWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .box {
+      display: flex;
+      width: 550px;
+      height: 40px;
+      border: 1px solid rgb(228, 223, 223);
+      border-radius: 5px;
+    }
+
+    .box:focus {
+      border: 2px solid rgb(98, 147, 253);
+      outline: none;
+    }
+
+    .ok {
+      width: 550px;
+      text-align: left;
+    }
+
+    .btn {
+      width: 550px;
+      height: 40px;
+      background-color: rgba(0, 119, 255, 0.822);
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: rgb(0, 102, 220);
+      cursor: pointer;
+    }
+
+    .msg {
+      font-size: 12px;
+      margin-top: 5px;
+      text-align: right;
+      width: 550px;
+      height: 1px;
+    }
+
+    .btn:disabled {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img class="img" src="./imges/Logotype_Green.png" alt="">
+    <h2>회원 가입</h2>
+    <div class="inputWrap">
+      <div>
+        <input type="text" class="box" id="id" placeholder="아이디 입력">
+        <div id="idMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <input name="pw" type="password" class="box" id="pw" placeholder="비밀번호 입력">
+        <div id="pwMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <input name="pw" type="password" class="box" id="pw1" placeholder="비밀번호 확인">
+        <div id="pw1Msg" class="msg"></div>
+      </div>
+
+      <div>
+        <input type="text" class="box" id="nickname" placeholder="닉네임 입력">
+        <div id="nameMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <textarea class="box" id="purpose" placeholder="가입 목적 입력" style="height:100px; resize:none;"></textarea>
+        <div id="purposeMsg" class="msg"></div>
+      </div>
+
+      <div class="ok">
+        <input type="checkbox" id="agree">
+        <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+      </div>
+
+
+
+      <button class="btn" id="submitBtn" onclick="submitForm()" disabled>가입 요청</button>
+    </div>
+  </div>
+  <script>
+
+    const idInput = document.getElementById("id");
+    const pwInputs = document.getElementsByName("pw");
+    const pwInput = pwInputs[0];
+    const pwCheckInput = pwInputs[1];
+    const nameInput = document.getElementById("nickname");
+    const purposeInput = document.getElementById("purpose");
+    const agreeInput = document.getElementById("agree");
+
+
+    const submitBtn = document.getElementById("submitBtn");
+
+    const idRegex = /^[a-zA-Z0-9_]{8,20}$/;
+    const pwRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$/;
+    const nameRegex = /^.{2,10}$/;
+    const purposeRegex = /^.{5,100}$/;
+
+
+    function validate(input, regex, msgEl) {
+      if (regex.test(input.value)) {
+        msgEl.textContent = "사용 가능 합니다.";
+        msgEl.style.color = "green";
+      } else {
+        msgEl.textContent = "입력 조건이 맞지 않습니다.";
+        msgEl.style.color = "red";
+      }
+      checkAllValid();
+    }
+
+    function checkAllValid() {
+      const isIdValid = idRegex.test(idInput.value);
+      const isPwValid = pwRegex.test(pwInput.value);
+      const isNameValid = nameRegex.test(nameInput.value);
+      const isPwMatch = pwInput.value === pwCheckInput.value;
+      const isPurposeValid = purposeRegex.test(purposeInput.value);
+      const isAgree = agreeInput.checked;
+
+      if (isIdValid && isPwValid && isNameValid && isPwMatch && isPurposeValid && isAgree) {
+        submitBtn.disabled = false;
+      } else {
+        submitBtn.disabled = true;
+      }
+    }
+
+    function submitForm() {
+
+      const isIdValid = idRegex.test(idInput.value);
+      const isPwValid = pwRegex.test(pwInput.value);
+      const isNameValid = nameRegex.test(nameInput.value);
+      const isPwMatch = pwInput.value === pwCheckInput.value;
+      const isPurposeValid = purposeRegex.test(purposeInput.value);
+      const isAgree = agreeInput.checked;
+
+
+      if (isIdValid && isPwValid && isNameValid && isPwMatch && isPurposeValid && isAgree) {
+        alert("회원가입 성공 👍");
+
+        document.querySelectorAll(".box").forEach(input => input.value = "");
+        document.querySelectorAll(".msg").forEach(msg => msg.textContent = "");
+
+        agreeInput.checked = false;
+
+        submitBtn.disabled = true;
+      } else {
+        alert("입력값을 다시 확인해주세요.");
+      }
+    }
+
+    // 아이디 검사
+    idInput.addEventListener("input", () => {
+      validate(idInput, idRegex, document.getElementById("idMsg"));
+    });
+
+    // 비밀번호 검사
+    pwInput.addEventListener("input", () => {
+      validate(pwInput, pwRegex, document.getElementById("pwMsg"));
+    });
+
+    // 비밀번호 확인 검사
+    pwCheckInput.addEventListener("input", () => {
+      const msg = document.getElementById("pw1Msg");
+
+      if (pwInput.value === pwCheckInput.value && pwCheckInput.value !== "") {
+        msg.textContent = "비밀번호가 일치합니다.";
+        msg.style.color = "green";
+      } else {
+        msg.textContent = "비밀번호가 일치하지 않습니다.";
+        msg.style.color = "red";
+      }
+      checkAllValid();
+    });
+
+    // 닉네임 검사
+    nameInput.addEventListener("input", () => {
+      validate(nameInput, nameRegex, document.getElementById("nameMsg"));
+    });
+
+    purposeInput.addEventListener("input", () => {
+      validate(purposeInput, purposeRegex, document.getElementById("purposeMsg"));
+    });
+
+    agreeInput.addEventListener("change", checkAllValid);
+  </script>
+</body>
+
+</html>

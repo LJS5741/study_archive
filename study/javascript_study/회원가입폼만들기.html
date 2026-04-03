@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: lightgray;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 10px;
+    }
+
+    .inputWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .box {
+      display: flex;
+      width: 550px;
+      height: 40px;
+      border: 1px solid rgb(228, 223, 223);
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .box:focus {
+      border: 2px solid rgb(98, 147, 253);
+      outline: none;
+      box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
+    }
+
+    .btn {
+      width: 550px;
+      height: 40px;
+      background-color: rgba(0, 119, 255, 0.822);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: rgb(0, 102, 220);
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .msg {
+      font-size: 12px;
+      margin-top: 5px;
+      text-align: right;
+      width: 550px;
+      height: 1px;
+    }
+
+    .btn:disabled {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>회원 가입</h1>
+    <div class="inputWrap">
+      <div>
+        <input type="text" class="box" id="id">
+        <div id="idMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <input type="password" class="box" id="pw">
+        <div id="pwMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <input type="email" class="box" id="email">
+        <div id="emailMsg" class="msg"></div>
+      </div>
+
+      <div>
+        <input type="tel" class="box" id="phone">
+        <div id="phoneMsg" class="msg"></div>
+      </div>
+
+      <button class="btn" id="submitBtn" onclick="submitForm()" disabled>가입 요청</button>
+    </div>
+  </div>
+  <script>
+
+    const idInput = document.getElementById("id");
+    const pwInput = document.getElementById("pw");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+
+    const idRegex = /^[a-zA-Z0-9_]{8,20}$/;
+    const pwRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$/;
+    const emailRegex = /^([a-z]+\d*)+(\.?\w+)+@\w+(\.\w{2,3})+$/;
+    const phoneRegex = /^01[0-9]-\d{3,4}-\d{4}$/;
+
+    function validate(input, regex, msgEl) {
+      if (regex.test(input.value)) {
+        msgEl.textContent = "사용 가능 합니다.";
+        msgEl.style.color = "green";
+      } else {
+        msgEl.textContent = "입력 조건이 맞지 않습니다.";
+        msgEl.style.color = "red";
+      }
+      checkAllValid();
+    }
+
+    function checkAllValid() {
+      const isIdValid = idRegex.test(idInput.value);
+      const isPwValid = pwRegex.test(pwInput.value);
+      const isEmailValid = emailRegex.test(emailInput.value);
+      const isPhoneValid = phoneRegex.test(phoneInput.value);
+
+      const submitBtn = document.getElementById("submitBtn");
+
+      if (isIdValid && isPwValid && isEmailValid && isPhoneValid) {
+        submitBtn.disabled = false;
+        submitBtn.addEventListener("click", (e) => {
+          const empty = document.querySelectorAll(".box");
+          empty.forEach(input => {
+            input.value = "";
+          });
+          document.querySelectorAll(".msg").forEach(msg => {
+            msg.textContent = "";
+          });
+        });
+      } else {
+        submitBtn.disabled = true;
+      }
+    }
+
+    function submitForm() {
+      const isIdValid = idRegex.test(idInput.value);
+      const isPwValid = pwRegex.test(pwInput.value);
+      const isEmailValid = emailRegex.test(emailInput.value);
+      const isPhoneValid = phoneRegex.test(phoneInput.value);
+
+      if (isIdValid && isPwValid && isEmailValid && isPhoneValid) {
+        alert("회원가입 성공 👍");
+
+      } else {
+        alert("입력값을 다시 확인해주세요.");
+      }
+    }
+
+    idInput.addEventListener("input", () => {
+      validate(idInput, idRegex, document.getElementById("idMsg"));
+    });
+
+    pwInput.addEventListener("input", () => {
+      validate(pwInput, pwRegex, document.getElementById("pwMsg"));
+    });
+
+    emailInput.addEventListener("input", () => {
+      validate(emailInput, emailRegex, document.getElementById("emailMsg"));
+    });
+
+    phoneInput.addEventListener("input", () => {
+      validate(phoneInput, phoneRegex, document.getElementById("phoneMsg"));
+    });
+  </script>
+</body>
+
+</html>
