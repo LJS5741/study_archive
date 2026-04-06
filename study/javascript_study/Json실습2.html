@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .person {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>학생 정보</h1>
+  <div id="container">
+
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+
+    // map을 이용해 JSON 객체 데이터를 HTML 형식으로 변환
+    const jsonData = `
+[
+  {
+    "name": "이지성",
+    "age": 25,
+    "isStudent": false,
+    "score" : 95,
+    "address": {
+      "city": "평택시",
+      "zipcode": "12345"
+    }
+  },
+  {
+    "name": "차나래",
+    "age": 24,
+    "isStudent": false,
+    "score" : 90,
+    "address": {
+      "city": "천안시",
+      "zipcode": "54321"
+    }
+  },
+  {
+    "name": "김현중",
+    "age": 27,
+    "isStudent": false,
+    "score" : 98,
+    "address": {
+      "city": "아산시",
+      "zipcode": "98765"
+    }
+  }
+]
+`;
+    const jsonObject = JSON.parse(jsonData);
+    const htmlContent = jsonObject.map(person => `
+  <div class="person">
+    <h2>${person.name}</h2>
+    <p>나이: ${person.age}</p>
+    <p>학생 여부: ${person.isStudent ? "예" : "아니오"}</p>
+    <p>과목: ${person.score}</p>
+    <p>주소: ${person.address.city}, 우편번호: ${person.address.zipcode}</p>
+  </div>
+  `).join('');
+    container.innerHTML = htmlContent;
+  </script>
+</body>
+
+</html>
