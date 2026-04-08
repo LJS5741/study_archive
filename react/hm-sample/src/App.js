@@ -1,18 +1,18 @@
 import "./App.css";
-import Welcome from "./Welcome";
-
-const members = [
-  { name: "곰돌이", age: 23, addr: "충남 천안시", gender: "M", isAdult: true },
-  { name: "장원영", age: 23, addr: "충남 천안시", gender: "F", isAdult: true },
-  { name: "안유진", age: 23, addr: "충남 천안시", gender: "F", isAdult: true },
-];
+import JsxEx from "./2026.04.07/JsxEx";
+import Welcome from "./2026.04.07/Welcome";
+import Say from "./2026.04.08/Say";
+import InputEvent from "./2026.04.08/InputEvent";
+import StateEx from "./react_study/StateEx";
+import DropDown from "./2026.04.08/DropDown";
+import RadioButton from "./2026.04.08/RadioButton";
+import CheckBox from "./2026.04.08/CheckBox";
+import Table from "./2026.04.08/Table";
 
 function App() {
   return (
     <>
-      {members.map((member, index) => (
-        <Welcome key={index} member={member} />
-      ))}
+      <Table />
     </>
   );
 }
