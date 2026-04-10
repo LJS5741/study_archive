@@ -16,13 +16,12 @@ const member = {
   age: 22,
   job: "아이돌",
   addr: "서울시 강남구 역삼동",
-  phone: ["02-1234-5678", "031-3456-7890"]
-}
-console.log(member)
+  phone: ["02-1234-5678", "031-3456-7890"],
+};
+console.log(member);
 // 객체 -> JSON 직렬화
 const jsonFormat = JSON.stringify(member);
 console.log(jsonFormat);
 // JSON - 객체로 역직렬화
 const objectJson = JSON.parse(jsonFormat);
 console.log(objectJson);
-
