@@ -1,23 +1,15 @@
-import "./App.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Profile from "./pages/Profile";
-import Login from "./pages/Login";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProjectLogin from "./2026.04.10/pages/ProjectLogin";
+import ProjectSignup from "./2026.04.10/pages/ProjectSignup";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route element={<Layout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/profile/:username" element={<Profile />} />
-        </Route>
+        <Route path="/" element={<ProjectLogin />} />
+        <Route path="/signup" element={<ProjectSignup />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
