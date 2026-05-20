@@ -3,6 +3,8 @@ package com.human.jpa.repository;
 import com.human.jpa.constant.ItemSellStatus;
 import com.human.jpa.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,7 +34,6 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     // Like : SQL의 LIKE 연산자와 동일하게 패턴을 사용하여 조회
     // OrderBy : 정렬 조건을 지정
 
-
     // 문제 1. 상품명이 "테스트 상품5"인 상품을 조회하는 쿼리 메서드를 작성하고 테스트하시오.
     List<Item> findByItemName(String itemName);
     // 문제 2. 상품명이 "테스트 상품1" 이거나 상세설명이 "테스트 상품 상세 설명2"인 상품을 조회하는 쿼리 메서드를 작성하고 테스트하시오.
@@ -48,9 +49,28 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     // 문제 7. 가격이 30000원 이상 70000원 이하인 상품을 조회하는 쿼리 메서드를 작성하고 테스트하시오.
     List<Item> findByPriceBetween(int startPrice, int endPrice);
     // 문제 8. 판매 상태가 SELL인 상품의 개수와 SOLD_OUT인 상품의 개수를 각각 조회하는 쿼리 메서드를 작성하고 테스트하시오.
-    List<Item> countByItemSellStatus(ItemSellStatus itemSellStatus);
+    long countByItemSellStatus(ItemSellStatus itemSellStatus);
     // 문제 9. 상품명 "테스트 상품1"이 존재하는지 여부와 "없는 상품"이 존재하는지 여부를 조회하는 쿼리 메서드를 작성하고 테스트하시오.
     boolean existsByItemName(String itemName);
     // 문제 10. 재고가 50 미만인 상품을 재고 오름차순으로 조회하는 쿼리 메서드를 작성하고 테스트하시오.
     List<Item> findByStockNumberLessThanOrderByStockNumberAsc(int stockNumber);
+
+    // JPQL : JPA Query Language, 객체지향 쿼리
+    // - SQL문법과 비슷하지만 테이블명 대신 클래스명, 컬럼명 대신 필드명을 사용
+    @Query("SELECT i FROM Item i WHERE i.itemDetail LIKE %:itemDetail% ORDER BY i.price DESC")
+    List<Item> findByItemDetailLike(@Param("itemDetail") String itemDetail);
+
+    // nativeQuery : 데이터베이스에  종속 되는 Query
+    @Query(value = "SELECT * FROM item WHERE item detail LIKE %: itemDetial% ORDER BY price DESC", nativeQuery = true)
+    List<Item> findByItemDetailLikeNative(String itemDetail);
+
+    // JPQL 문제
+
+    // 문제 1. 가격이 50000원 미만인 상품을 가격 내림차순으로 조회하는 JPQL 쿼리를 작성하고 테스트하시오.
+    // 단, 테이블명 대신 클래스명 Item, 컬럼명 대신 필드명 price를 사용할 것.
+    @Query("SELECT i FROM Item i WHERE i.price < :price ORDER BY i.price DESC")
+    List<Item> findByPriceLessThanJPQL(@Param("price") int price);
+    // 문제 2. 판매 상태가 SELL이면서 재고가 60 미만인 상품을 조회하는 JPQL 쿼리를 작성하고 테스트하시오.
+// 단, @Param을 사용하여 파라미터를 바인딩할 것.
+
 }
