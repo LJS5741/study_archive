@@ -1,4 +1,4 @@
-package com.jpa_study.dto;
+package com.jpa_study.jpa.dto;
 
 import com.jpa_study.jpa.entity.Member;
 import lombok.Getter;

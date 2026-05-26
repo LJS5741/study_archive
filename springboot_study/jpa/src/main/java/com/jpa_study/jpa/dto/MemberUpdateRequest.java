@@ -1,4 +1,4 @@
-package com.jpa_study.dto;
+package com.jpa_study.jpa.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -38,6 +38,7 @@ public class MemberService {
         Member member = findMember(id); // 영속 상태 Entity 조회
         member.changeName(name); // 값 변경. 트랜잭션 종료 시 UPDATE
         return member; // 수정된 Entity 반환
+
     }
 
     public void deleteMember(Long id) { // 회원 삭제

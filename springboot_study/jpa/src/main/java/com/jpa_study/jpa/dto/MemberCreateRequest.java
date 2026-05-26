@@ -1,4 +1,4 @@
-package com.jpa_study.dto;
+package com.jpa_study.jpa.dto;
 
 import lombok.Getter; // getter 생성
 import lombok.NoArgsConstructor; // JSON 역직렬화를 위한 기본 생성자
