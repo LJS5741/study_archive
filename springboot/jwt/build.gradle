@@ -39,7 +39,8 @@ dependencies {
 	runtimeOnly  'io.jsonwebtoken:jjwt-jackson:0.11.2'
 
 	// Swagger, Spring Boot 3.x 전용
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+//	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.8'
 
 	// Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -51,25 +52,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-springBoot {
-	mainClass = 'com.human.jwtboard.JwtboardApplication'
-}
-
-sourceSets {
-	main {
-		java {
-			srcDirs = ['src/src/main/java']
-		}
-		resources {
-			srcDirs = ['src/src/main/resources']
-		}
-	}
-
-	test {
-		java {
-			srcDirs = ['src/src/test/java']
-		}
-	}
 }

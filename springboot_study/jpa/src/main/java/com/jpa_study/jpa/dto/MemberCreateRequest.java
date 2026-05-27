@@ -1,15 +1,15 @@
 package com.jpa_study.jpa.dto;
 
-import lombok.Getter; // getter 생성
-import lombok.NoArgsConstructor; // JSON 역직렬화를 위한 기본 생성자
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-
 public class MemberCreateRequest {
 
-    private String name; // 요청으로 받을 회원 이름
-    private String email; // 요청으로 받을 이메일
+    private String name; // 회원 이름
 
+    private String email; // 로그인 ID로 사용할 이메일
+
+    private String password; // 로그인에 사용할 비밀번호
 }
-
