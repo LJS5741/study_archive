@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f4d6004-7523-40de-8600-1deba291b28d" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/JwtboardApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/constant/Authority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/controller/MemberController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/controller/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/request/LoginReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/request/PostReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/request/SignUpReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/request/TokenReissueReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/response/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/response/MemberResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/response/PostResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/dto/response/TokenDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/entity/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/entity/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/entity/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/entity/RefreshToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/exception/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/repository/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/repository/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/repository/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/repository/RefreshTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/JwtAccessDeniedHandle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/JwtAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/JwtSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/SecurityUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/security/TokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/service/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/java/com/human/jwtboard/service/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springboot/jwt/src/test/java/com/human/jwtboard/JwtboardApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3EeXwoSVhXkIwKiBe5x5kPM7YIm" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sneij/Desktop/새 폴더/study_archive/springboot_study/jwt-study",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.JwtStudyApplication">
+    <configuration name="JwtStudyApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="jwt-study-step2-starter.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.human.jwtstudy.JwtStudyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="jwt-study-step1.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.jwtstudy.JwtStudyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="3f4d6004-7523-40de-8600-1deba291b28d" name="변경" comment="" />
+      <created>1780540251763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780540251763</updated>
+      <workItem from="1780540256088" duration="4507000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
