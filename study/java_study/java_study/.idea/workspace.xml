@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1285eec2-ee99-408d-9cfc-969359caae27" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/JpaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/controller/MemberController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/dto/MemberCreateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/dto/MemberResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/dto/MemberUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/entity/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/repository/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/security/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/java/com/jpa_study/jpa/service/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jpa/src/test/java/com/jpa_study/jpa/JpaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/8.14.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/JwtStudyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/constant/Authority.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/dto/request/SignUpReqDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/dto/response/ApiResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/dto/response/MemberResDto$MemberResDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/dto/response/MemberResDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/entity/Member$MemberBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/entity/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/repository/MemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/main/com/human/jwtstudy/service/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/bin/test/com/human/jwtstudy/JwtStudyApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/JwtStudyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/constant/Authority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/dto/request/SignUpReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/dto/response/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/dto/response/MemberResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/entity/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/repository/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/java/com/human/jwtstudy/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../springboot_study/jwt-study/src/test/java/com/human/jwtstudy/JwtStudyApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3FfFMQhLm5cS3PuKRb9dopyCTxV" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/sneij/Desktop/지성/study_archive/study/java_study/java_study/src/Main.java",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="1285eec2-ee99-408d-9cfc-969359caae27" name="변경" comment="" />
+      <created>1782458172333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782458172333</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
