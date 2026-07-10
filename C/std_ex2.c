@@ -1,110 +1,92 @@
-#include <stdio.h>
+// 1. ë‚´ ì •ë³´ ì¶œë ¥í•˜ê¸°
+// ì´ë¦„, ë‚˜ì´, í‚¤ë¥¼ ë³€ìˆ˜ì— ì €ì¥í•˜ê³  ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 
-// 1. ³» Á¤º¸ Ãâ·ÂÇÏ±â
-// ÀÌ¸§, ³ªÀÌ, Å°¸¦ º¯¼ö¿¡ ÀúÀåÇÏ°í ¾Æ·¡ Çü½ÄÀ¸·Î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À¸·Î ÀÛ¼ºÇÏ½Ã¿À.
+void my_info_printf() {
+  char *name = "ê³°ëŒì´";
+  int age = 23;
+  float height = 170;
 
-void my_info_printf(){
-  char name[20];
-  int age;
-  int height;
-  printf("ÀÌ¸§ ÀÔ·Â : ");
-  scanf("%s", &name);
-  printf("³ªÀÌ ÀÔ·Â : ");
-  scanf("%d", &age);
-  printf("Å° ÀÔ·Â : ");
-  scanf("%d", &height);
+  printf("ì´ë¦„ : %s\n", name);
+  printf("ë‚˜ì´: %d\n", age);
+  printf("í‚¤: %.1f\n", height);
 
-  printf("\n====================\n");
-  printf("ÀÌ¸§ : %s\n", name);
-  printf("³ªÀÌ : %d\n", age);
-  printf("Å° : %d\n", height);
 }
 
-// 2. µÎ Á¤¼ö¸¦ ¹Ş¾Æ »çÄ¢¿¬»ê ÇÁ·Î±×·¥ ÀÛ¼º
-void number_clac(){
-  int num1;
-  int num2;
-  printf("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
-  scanf("%d", &num1);
-  printf("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
-  scanf("%d", &num2);
-  printf("%d + %d = %d\n", num1, num2, num1+num2);
-  printf("%d - %d = %d\n", num1, num2, num1-num2);
-  printf("%d * %d = %d\n", num1, num2, num1*num2);
-  printf("%d / %d = %d\n", num1, num2, num1/num2);
+// 2. ë‘ ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ì‚¬ì¹™ ì—°ì‚° í”„ë¡œê·¸ë¨ ì‘ì„±
+void number_calc() {
+
+
 }
 
-// 3. ¿øÀÇ ³ĞÀÌ¿Í µÑ·¹ °è»ê
-// ¹İÁö¸§À» ÀÔ·Â¹Ş¾Æ ¿øÀÇ ³ĞÀÌ¿Í µÑ·¹¸¦ °è»êÇÏ¿© Ãâ·ÂÇÏ½Ã¿À. ´Ü, ¿øÁÖÀ² PI´Â const·Î ¼±¾ğÇÏ¿© »ç¿ëÇÏ½Ã¿À.
-// ³ĞÀÌ : PI * ¹İÁö¸§ * ¹İÁö¸§
-// µÑ·¹ : 2 * PI * ¹İÁö¸§
-void circle_calc(){
-  const float PI = 3.141592;
-  float r;
-  printf("¹İÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
-  scanf("%f", &r);
-  printf("³ĞÀÌ : %.2f\n", PI*r*r);
-  printf("µÑ·¹ : %.2f\n", 2*PI*r);
+// 3. ì›ì˜ ë„“ì´ì™€ ë‘˜ë ˆ ê³„ì‚°
+// ë°˜ì§€ë¦„ì„ ì…ë ¥ë°›ì•„ ì›ì˜ ë„“ì´ì™€ ë‘˜ë ˆë¥¼ ê³„ì‚°í•˜ì—¬ ì¶œë ¥í•˜ì‹œì˜¤. ë‹¨, ì›ì£¼ìœ¨ PIëŠ” constë¡œ ì„ ì–¸í•˜ì—¬ ì‚¬ìš©í•˜ì‹œì˜¤.
+// ë„“ì´ : PI * ë°˜ì§€ë¦„ * ë°˜ì§€ë¦„
+// ë‘˜ë ˆ : 2 * PI * ë°˜ì§€ë¦„
+
+
+// 4. ì´ˆë¥¼ ì‹œ/ë¶„/ì´ˆë¡œ ë³€í™˜
+// ì´ ì´ˆ(second)ë¥¼ ì…ë ¥ë°›ì•„ ëª‡ ì‹œê°„ ëª‡ ë¶„ ëª‡ ì´ˆì¸ì§€ ë³€í™˜í•˜ì—¬ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+void calc_time() {
+  int total, hour, minute, second;
+  printf("ì´ˆë¥¼ ì…ë ¥ í•˜ì„¸ìš” : ");
+  scanf("%d", &total);
+
+  hour = total / 3600;
+  minute = (total % 3600) / 60;
+  second = total % 60;
+
+  printf("%dì‹œê°„ %dë¶„ %dì´ˆ\n", hour, minute, second);
 }
 
-// 4. ÃÊ¸¦ ½Ã/ºĞ/ÃÊ·Î º¯È¯
-// ÃÑ ÃÊ(second)¸¦ ÀÔ·Â¹Ş¾Æ ¸î ½Ã°£ ¸î ºĞ ¸î ÃÊÀÎÁö º¯È¯ÇÏ¿© Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-void time_calc() {
-  int full_sec;
-  printf("ÃÑ ÃÊ(second)¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
-  scanf("%d", &full_sec);
-  int hour = full_sec/3600;
-  int minute = (full_sec%3600) / 60;
-  int sec = (full_sec%3600) % 60;
-  printf("º¯È¯µÈ ½Ã°£ : %d½Ã°£ %dºĞ %dÃÊ\n", hour, minute, sec);
-}
+// 5. í‘œì¤€ ì²´ì¤‘ ê³„ì‚°
+// í‚¤(cm)ì™€ ì„±ë³„ì„ ì…ë ¥ë°›ì•„ í‘œì¤€ ì²´ì¤‘ì„ ê³„ì‚°í•˜ê³ , í˜„ì¬ ì²´ì¤‘(kg)ê³¼ì˜ ì°¨ì´ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+// í‘œì¤€ ì²´ì¤‘ ê³µì‹:
 
-// 5. Ç¥ÁØ Ã¼Áß °è»ê
-// Å°(cm)¿Í ¼ºº°À» ÀÔ·Â¹Ş¾Æ Ç¥ÁØ Ã¼ÁßÀ» °è»êÇÏ°í, ÇöÀç Ã¼Áß(kg)°úÀÇ Â÷ÀÌ¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-// Ç¥ÁØ Ã¼Áß °ø½Ä :
-// ³²¼º : Å°(m) * Å°(m) * 22
-// ¿©¼º : Å°(m) * Å°(m) * 21
-void std_weight_calc(){\
-  int height_cm;
-  char gender;
-  float weight;
-  float std_weight;
-  printf("Å° ÀÔ·Â(cm) : ");
-  scanf("%d", &height_cm);
-  float height_m;
-  height_m = (float)height_cm / 100;
-  printf("¼ºº° ÀÔ·Â(M/F) : ");
-  scanf("%s", &gender);
-  printf("Ã¼Áß ÀÔ·Â : ");
+// ë‚¨ì„±: í‚¤(m) * í‚¤(m) * 22
+// ì—¬ì„±: í‚¤(m) * í‚¤(m) * 21
+void std_weight() {
+  float height_cm, height_m, weight, standard, diff;
+  int gender;
+
+  printf("í‚¤(cm): ");
+  scanf("%f", &height_cm);
+
+  printf("ì„±ë³„ (1: ë‚¨ì„±, 2: ì—¬ì„±): ");
+  scanf("%d", &gender);
+
+  printf("í˜„ì¬ ì²´ì¤‘(kg): ");
   scanf("%f", &weight);
 
-  if(gender == 'M') {
-    std_weight = height_m * height_m * 22;
-  }
-  else if (gender == 'F'){
-    std_weight = height_m * height_m * 21;
-  }
+  height_m = height_cm / 100.0;
 
-  printf("Ç¥ÁØ Ã¼Áß : %.2f\n", std_weight);
-  printf("ÇöÀç Ã¼Áß°úÀÇ Â÷ÀÌ(kg) : %.2f", std_weight - weight);
+  if (gender == 1)
+      standard = height_m * height_m * 22;
+  else
+      standard = height_m * height_m * 21;
+
+  diff = weight - standard;
+
+  printf("í‘œì¤€ ì²´ì¤‘: %.2f kg\n", standard);
+
+  if (diff > 0)
+      printf("í˜„ì¬ ì²´ì¤‘ê³¼ì˜ ì°¨ì´: %.2f kg ì´ˆê³¼\n", diff);
+  else if (diff < 0)
+      printf("í˜„ì¬ ì²´ì¤‘ê³¼ì˜ ì°¨ì´: %.2f kg ë¯¸ë‹¬\n", -diff);
+  else
+      printf("í‘œì¤€ ì²´ì¤‘ì…ë‹ˆë‹¤!\n");
 
 }
+
+
 
 #include <stdio.h>
 int main() {
-  // 1¹ø ¹®Á¦
+
+  // 1ë²ˆ ë¬¸ì œ
   my_info_printf();
 
-  // 2¹ø ¹®Á¦
-  number_clac();
+  // 2ë²ˆ ë¬¸ì œ
 
-  // 3¹ø ¹®Á¦
-  circle_calc();
 
-  // 4¹ø ¹®Á¦
-  time_calc();
-
-  // 5¹ø ¹®Á¦
-  std_weight_calc();
 
 }
