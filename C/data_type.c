@@ -1,10 +1,10 @@
-// ë°ì´í„°í˜• : ë³€ìˆ˜/ìƒìˆ˜ì— ì €ì¥ë  ê°’ì˜ ìœ í˜•ì´ë‚˜ í¬ê¸°ë¥¼ ê²°ì •
+// µ¥ÀÌÅÍÇü : º¯¼ö/»ó¼ö¿¡ ÀúÀåµÉ °ªÀÇ À¯ÇüÀÌ³ª Å©±â¸¦ °áÁ¤
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 
 int main() {
-  char gender = 'M'; // ë¬¸ìë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë°ì´í„° íƒ€ì…, ë‚´ë¶€ì ìœ¼ë¡œ ì •ìˆ˜ê°’ìœ¼ë¡œ ì›€ì§ì„, -128 ~ 127
+  char gender = 'M'; // ¹®ÀÚ¸¦ ÀúÀåÇÏ±â À§ÇÑ µ¥ÀÌÅÍ Å¸ÀÔ, ³»ºÎÀûÀ¸·Î Á¤¼ö°ªÀ¸·Î ¿òÁ÷ÀÓ, -128 ~ 127
 
   printf("%c\n", gender);
   printf("%d\n", (int)gender);
@@ -12,22 +12,22 @@ int main() {
   char num = -1;
   printf("%c %d\n", num, num);
 
-  // Cì–¸ì–´ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ bool íƒ€ì…ì´ í¬í•¨ë˜ì–´ ìˆì§€ ì•ŠìŒ, ì°¸/ê±°ì§“ì„ êµ¬ë¶„í•˜ëŠ” ë°ì´í„° íƒ€ì…, Cì–¸ì–´ 1/0 ìœ¼ë¡œ ê¸°ë³¸ì  íŒë³„í•¨
+  // C¾ğ¾î´Â ±âº»ÀûÀ¸·Î bool Å¸ÀÔÀÌ Æ÷ÇÔµÇ¾î ÀÖÁö ¾ÊÀ½, Âü/°ÅÁşÀ» ±¸ºĞÇÏ´Â µ¥ÀÌÅÍ Å¸ÀÔ, C¾ğ¾î 1/0 À¸·Î ±âº»Àû ÆÇº°ÇÔ
   bool is_adult = true;
 
-  // sizeof() : ë°ì´í„°í˜•ì˜ í¬ê¸°ë¥¼ í™•ì¸í•  ë•Œ ì‚¬ìš©
-  printf("int í˜•ì˜ í¬ê¸° : %lu ë°”ì´íŠ¸\n", sizeof(int));
+  // sizeof() : µ¥ÀÌÅÍÇüÀÇ Å©±â¸¦ È®ÀÎÇÒ ¶§ »ç¿ë
+  printf("int ÇüÀÇ Å©±â : %lu ¹ÙÀÌÆ®\n", sizeof(int));
 
-  printf("ì£¼ì†Œì˜ í¬ê¸° : %lu ë°”ì´íŠ¸\n", sizeof(int *));
-  printf("ì£¼ì†Œì˜ í¬ê¸° : %lu ë°”ì´íŠ¸\n", sizeof(char *));
-  printf("ì£¼ì†Œì˜ í¬ê¸° : %lu ë°”ì´íŠ¸\n", sizeof(void *));
+  printf("ÁÖ¼ÒÀÇ Å©±â : %lu ¹ÙÀÌÆ®\n", sizeof(int *));
+  printf("ÁÖ¼ÒÀÇ Å©±â : %lu ¹ÙÀÌÆ®\n", sizeof(char *));
+  printf("ÁÖ¼ÒÀÇ Å©±â : %lu ¹ÙÀÌÆ®\n", sizeof(void *));
 
-  // ì—´ê±°í˜• : íŠ¹ì •í•œ ê°’ì„ ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ëª…ëª…í•  ë•Œ ì‚¬ìš© ë¨
+  // ¿­°ÅÇü : Æ¯Á¤ÇÑ °ªÀ» ´Ù¸¥ ÀÌ¸§À¸·Î ¸í¸íÇÒ ¶§ »ç¿ë µÊ
   enum Color { RED = 100, ORANGE, YELLOW, GREEN, BLUE};
   enum Color color = BLUE;
   printf("Color : %d\n", color);
 
-  // êµ¬ì¡°ì²´ : ì—¬ëŸ¬ê°œì˜ ë³€ìˆ˜ë¥¼ í•˜ë‚˜ì˜ ê·¸ë£¹ìœ¼ë¡œ ë¬¶ëŠ” ë° ì‚¬ìš©
+  // ±¸Á¶Ã¼ : ¿©·¯°³ÀÇ º¯¼ö¸¦ ÇÏ³ªÀÇ ±×·ìÀ¸·Î ¹­´Â µ¥ »ç¿ë
   struct Member {
     int id;
     char name[20];
@@ -38,12 +38,12 @@ int main() {
 
   struct Member member;
   member.id = 100;
-  strcpy(member.name, "ê³°ëŒì´");
+  strcpy(member.name, "°õµ¹ÀÌ");
   member.age = 23;
-  strcpy(member.addr, "ì¶©ë‚¨ ì²œì•ˆì‹œ");
+  strcpy(member.addr, "Ãæ³² Ãµ¾È½Ã");
   member.gender = 'M';
 
-  // typedef : ìë£Œí˜•ì— ëŒ€í•œ ë³„ì¹­ ì§€ì •
+  // typedef : ÀÚ·áÇü¿¡ ´ëÇÑ º°Äª ÁöÁ¤
   typedef unsigned int uint;
 
   typedef struct {
