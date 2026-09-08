@@ -1,4 +1,4 @@
-package 강의.클래스와데이터.EX;
+package 강의.클래스와데이터;
 
 public class ProductOrderMain {
     public static void main(String[] args) {
