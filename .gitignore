@@ -1,0 +1,59 @@
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# =========================
+# Java
+# =========================
+*.class
+out/
+bin/
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+
+# =========================
+# Maven
+# =========================
+target/
+
+# =========================
+# Node.js / React
+# =========================
+node_modules/
+coverage/
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# C / C++
+# =========================
+*.exe
+*.o
+*.obj
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
